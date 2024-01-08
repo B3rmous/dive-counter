@@ -1,0 +1,102 @@
+body {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  .box {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .counter {
+    font-size: 24px;
+    margin-top: 10px;
+    color: #ccc;
+  }
+  
+  .tag {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #ccc;
+  }
+  
+  #total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+  }
+  
+  .dark-mode {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .dark-mode label {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+  }
+  
+  .dark-mode input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .dark-mode span {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dark-mode span:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .dark-mode input:checked + span {
+    background-color: #888;
+  }
+  
+  .dark-mode input:checked + span:before {
+    transform: translateX(26px);
+  }
